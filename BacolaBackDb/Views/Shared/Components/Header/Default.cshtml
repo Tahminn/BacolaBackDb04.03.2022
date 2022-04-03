@@ -1,0 +1,238 @@
+﻿@model HomeVM
+
+<header>
+    <div class="header-top">
+        <div class="container">
+            <ul class="nav nav-myaccount">
+                <li><a asp-controller="about" asp-action="index">About Us</a></li>
+                <li><a asp-controller="myaccount" asp-action="index">My account</a></li>
+                <li><a asp-controller="cart" asp-action="index">Wishlist</a></li>
+                <li><a asp-controller="cart" asp-action="index">Order Tracking</a></li>
+            </ul>
+            <div class="delivery-info">
+                <i class="fa fa-cloud-sun"></i> 100% Secure delivery without
+                contacting the courier
+            </div>
+            <div class="call-us">
+                Need Help? Call us: <a href="#">+ 0020 500</a>
+            </div>
+            <div class="language-option">
+                <a href="#">English <i class="fa fa-angle-down"></i></a>
+                <ul class="language-menu inactive">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">German</a></li>
+                    <li><a href="#">Spanish</a></li>
+                </ul>
+            </div>
+            <div class="currency-option">
+                <a href="#">USD <i class="fa fa-angle-down"></i></a>
+                <ul class="currency-menu inactive">
+                    <li><a href="#">USD</a></li>
+                    <li><a href="#">INR</a></li>
+                    <li><a href="#">GBP</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="header-middle">
+        <div class="container">
+            <div class="sidebar-icon">
+                <i class="fal fa-bars fa-3x"></i>
+            </div>
+            <div class="logo-wrapper">
+                <a asp-controller="home" asp-action="index">
+                    <img class="bacola-logo-first"
+                         src="~/assets/img/bacola-logo.png"
+                         alt="" />
+                    <img class="bacola-logo-second"
+                         src="~/assets/img/bacola-secondary-logo.png"
+                         alt="" />
+                    <p style="
+                  color: rgb(150, 147, 147);
+                  font-size: 0.65rem;
+                  text-align: center;
+                ">
+                        Online Grocery Shopping Center
+                    </p>
+                </a>
+            </div>
+            <div class="select-location">
+                <button>
+                    <div class="button-select-location">
+                        <span>Your location</span>
+                        <p>Select a location</p>
+                    </div>
+                    <i class="fa fa-angle-down fa-2x"></i>
+                </button>
+            </div>
+            <div class="search-product">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2"
+                           type="search"
+                           placeholder="Search"
+                           aria-label="Search" />
+                    <i class="fa fa-magnifying-glass"></i>
+                </form>
+            </div>
+            <div class="header-side-buttons">
+                <div class="account-button">
+                    <a asp-controller="myaccount" asp-action="index"><i class="fa fa-user fa-2x"></i></a>
+                </div>
+                <div class="carts-button">
+                    <a asp-controller="cart" asp-action="index">
+                        <span>@ViewBag.Count</span>
+                        <div class="add-to-cart-logo">
+                            <i class="fas fa-cart-plus fa-2x"></i>
+                        </div>
+                    </a>
+                    <div class="products-added-cart">
+                        <ul class="list-added">
+                            @if (Model.BasketVM != null)
+                            {
+                                @foreach (var product in Model.BasketVM)
+                                {
+                                    <li>
+                                        <span>@Model.Products.Where(m => m.Id == product.Id).FirstOrDefault().Name</span>
+                                        <span style="margin-left:5px">@product.Count</span>
+                                    </li>
+                                }
+                            }
+                            else
+                            {
+                                <li>No products in the cart</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container">
+            <div class="button-box">
+                <button class="button-all-catagories">
+                    <i class="fa fa-bars"></i>
+                    ALL CATAGORIES
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="all-product-count">Total 0 products</div>
+                <ul class="all-catagories collapsed">
+                    @foreach (var categories in Model.Categories.Where(c => c.ParentId == null))
+                    {
+                        <li>
+                            <a style="width:100%; display:block" href="#">
+                                <i class="fal fa-mug-hot"></i>@categories.Name@if (categories.Children != null)
+                                {
+                                    <i style="margin-left:4rem; font-size: 1rem"
+                                       class="fal fa-angle-right"></i>
+                                }
+                            </a>
+                            @if (categories.Children != null)
+                            {
+                                <ul class="beverages-list inactive">
+                                    @foreach (var subcat in categories.Children)
+                                    {
+                                        <li><a href="#">@subcat.Name</a></li>
+                                    }
+                                </ul>
+                            }
+                        </li>
+                    }
+                    <hr />
+                    <li><a href="#">Value of the Day</a></li>
+                    <li><a href="#">Top 100 Offers</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div class="menu-wrapper">
+                <ul>
+                    <li>
+                        <div class="home-box">
+                            <a class="menu-a" asp-controller="home" asp-action="index">
+                                HOME <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="home-menu inactive">
+                                <li><a href="#">HOME 1</a></li>
+                                <li><a href="#">HOME 2</a></li>
+                                <li><a href="#">HOME 3</a></li>
+                                <li><a href="#">HOME 4</a></li>
+                                <li><a href="#">HOME 5</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="shop-box">
+                            <a class="menu-a" asp-controller="shop" asp-action="index">
+                                SHOP <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="shop-menu inactive">
+                                <li>
+                                    <a href="#">HOME 1</a>
+                                    <ul style="display: block">
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                        <li><a href="#">Home 1</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">HOME 2</a>
+                                    <ul style="display: block">
+                                        <li><a href="#">Home 2</a></li>
+                                        <li><a href="#">Home 2</a></li>
+                                        <li><a href="#">Home 2</a></li>
+                                        <li><a href="#">Home 2</a></li>
+                                        <li><a href="#">Home 2</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">HOME 3</a>
+                                    <ul style="display: block">
+                                        <li><a href="#">Home 3</a></li>
+                                        <li><a href="#">Home 3</a></li>
+                                        <li><a href="#">Home 3</a></li>
+                                        <li><a href="#">Home 3</a></li>
+                                        <li><a href="#">Home 3</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">HOME 4</a>
+                                    <ul style="display: block">
+                                        <li><a href="#">Home 4</a></li>
+                                        <li><a href="#">Home 4</a></li>
+                                        <li><a href="#">Home 4</a></li>
+                                        <li><a href="#">Home 4</a></li>
+                                        <li><a href="#">Home 4</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">HOME 5</a>
+                                    <ul style="display: block">
+                                        <li><a href="#">Home 5</a></li>
+                                        <li><a href="#">Home 5</a></li>
+                                        <li><a href="#">Home 5</a></li>
+                                        <li><a href="#">Home 5</a></li>
+                                        <li><a href="#">Home 5</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-drumstick-bite"></i> MEATS&SEAFOOD</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bread-slice"></i> BAKERY</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-mug-hot"></i> BEVERAGES</a>
+                    </li>
+                    <li><a asp-controller="blog" asp-action="index">BLOG</a></li>
+                    <li><a asp-controller="contact" asp-action="index">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

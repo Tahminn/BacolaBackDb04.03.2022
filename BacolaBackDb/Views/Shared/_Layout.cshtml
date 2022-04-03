@@ -1,0 +1,159 @@
+﻿@model HomeVM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+    <link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/jquery.ui.slider.css'>
+    <link rel="stylesheet" href="~/assets//bootstrap_js_css/bootstrap.css" />
+    <link rel="stylesheet" href="~/assets//stylesheets/style.css" />
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div class="covid19-reminder">
+        <p class="covid-notification">
+            Due to the <b>COVID 19</b> epidemic, orders may be processed with a
+            slight delay
+        </p>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-fixed">
+            <div class="sidebar-top">
+                <img class="bacola-logo-first"
+                     src="~/assets/img/bacola-logo.png"
+                     alt="" /><i class="fal fa-times fa-2x"></i>
+            </div>
+            <div class="select-location">
+                <button>
+                    <div class="button-select-location">
+                        <span>Your location</span>
+                        <p>Select a location</p>
+                    </div>
+                    <i class="fa fa-angle-down fa-2x"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("Header")
+    <hr />
+
+    @RenderBody()
+
+    @await Component.InvokeAsync("Footer")
+
+    <div class="select-location-back inactive">
+        <div class="select-location-box">
+            <div style="display: flex">
+                <h5>Choose your Delivery Location</h5>
+                <i style="margin-left: auto; cursor: pointer" class="fa fa-times"></i>
+            </div>
+            <p style="font-size: 12px">
+                Enter your address and we will specify the offer dor your area.
+            </p>
+            <div class="search-product" style="padding-top: 10px">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2"
+                           type="search"
+                           placeholder="Search"
+                           aria-label="Search" />
+                    <i class="fa fa-magnifying-glass"></i>
+                </form>
+            </div>
+            <div class="locations">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>Select a Location</span>
+                            <div>Clear All</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Alabama</span>
+                            <div>Min:$130</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="background-opacity inactive"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://pro.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-xVVam1KS4+Qt2OrFa+VdRUoXygyKIuNWUUUBZYv+n27STsJ7oDOHJgfF0bNKLMJF"
+          crossorigin="anonymous" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+    <script src="./script.js"></script>
+    <script src="~/assets/js/index.js"></script>
+    <script src="~/assets/js/cart-local-st.js"></script>
+    <script src="~/assets/js/@{@ViewBag.Javascript}.js"></script>
+</body>
+</html>

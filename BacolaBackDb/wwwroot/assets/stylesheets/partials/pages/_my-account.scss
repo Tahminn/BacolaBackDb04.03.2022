@@ -1,0 +1,63 @@
+#log-reg {
+  margin: 4rem 0;
+}
+#log-reg div.container div.row div.col-12 div.error-message {
+  padding: 1rem 0;
+  border: 1px solid $color-border;
+}
+#log-reg div.container div.row div.col-12 div.error-message p {
+  margin: 0 0 0 1rem;
+}
+#log-reg div.container div.row form div.row div.col-12.col-md-6 {
+  margin: 2rem 0;
+}
+#log-reg div.container div.row form div.row div.col-12.col-md-6 div.head-form {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid $color-border;
+  margin-bottom: 1rem;
+}
+
+#log-reg div.container div.row form div.row div.col-12.col-md-6 div input {
+  display: block;
+  margin: 0.5rem 0 1rem 0;
+  border: 0;
+  background-color: #f3f4f7;
+  height: 2rem;
+  width: 100%;
+}
+#log-reg div.container div.row form div.row div.col-12.col-md-6 .remember-me {
+  display: flex;
+  align-items: center;
+}
+#log-reg
+  div.container
+  div.row
+  form
+  div.row
+  div.col-12.col-md-6
+  .remember-me
+  input {
+  display: inline;
+  width: auto;
+  margin: 0 0.5rem 0 0;
+}
+#log-reg div.container div.row form div.row div.col-12.col-md-6 .login input {
+  background-color: #233a95;
+  border-radius: 5px;
+  color: #f3f4f7;
+}
+#log-reg div.container div.row form div.row div.col-12.col-md-6 .login a {
+  color: #2bbef9;
+}
+#log-reg div.container div.row form div.row div.col-12.col-md-6 .login a:hover {
+  color: #233a95;
+  text-decoration: underline;
+}
+#log-reg div.container div.row form div.row div.col-12.col-md-6 .privacy {
+  display: flex;
+  align-items: center;
+}
+#log-reg div.container div.row form div.row div.col-12.col-md-6 .privacy a {
+  color: red;
+  text-decoration: underline;
+}

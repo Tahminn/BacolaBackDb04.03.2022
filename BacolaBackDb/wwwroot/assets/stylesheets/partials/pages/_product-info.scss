@@ -1,0 +1,440 @@
+#product-info {
+  background-color: #f7f8fd;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#product-info div.container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+#product-info div.container div.row:nth-child(2) {
+  margin: 3rem 0;
+}
+
+#product-info div.container div.row div.header-name span {
+  font-size: $font-size-primary;
+  padding: 0.2rem 1rem;
+  color: $color-3mode;
+}
+
+#product-info div.container div.row div.header-name span:nth-child(3) {
+  border-right: 1px solid $color-border;
+  border-left: 1px solid $color-border;
+}
+
+#product-info div.container div.row div.product-slider {
+  position: relative;
+}
+
+#product-info div.container div.row div.product-slider div.slider-img {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+#product-info div.container div.row div.product-slider div.slider-img ul {
+  transition: transform 1s ease-in-out;
+  display: flex !important;
+  padding: 0;
+  width: 300%;
+}
+
+#product-info div.container div.row div.product-slider div.slider-img ul li {
+  width: 100%;
+  height: 100%;
+}
+
+#product-info
+  div.container
+  div.row
+  div.product-slider
+  div.slider-img
+  ul
+  li
+  .images-slider {
+  width: 100%;
+  height: 100%;
+}
+
+#product-info
+  div.container
+  div.row
+  div.product-slider
+  div.slider-img
+  ul
+  li
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+#product-info div.container div.row div.product-slider div.product-discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#product-info
+  div.container
+  div.row
+  div.product-slider
+  div.product-discount
+  span:nth-child(1) {
+  background-color: #2bbef9;
+  border-radius: 5px;
+  color: #ffffff;
+  width: 40px;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+#product-info
+  div.container
+  div.row
+  div.product-slider
+  div.product-discount
+  span:nth-child(2) {
+  background-color: #71778e;
+  border-radius: 5px;
+  color: #ffffff;
+  width: 120px;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-bottom: 10rem;
+  display: inline-block;
+}
+
+#product-info div.container div.row div.product-slider div.slider-controller {
+  display: flex;
+  justify-content: center;
+}
+
+#product-info
+  div.container
+  div.row
+  div.product-slider
+  div.slider-controller
+  div.controller-box {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#product-info
+  div.container
+  div.row
+  div.product-slider
+  div.slider-controller
+  div.controller-box
+  img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid $color-border;
+}
+
+#product-info
+  div.container
+  div.row
+  div.product-slider
+  div.slider-controller
+  div.controller-box
+  img.border {
+  border: 1px solid #233a95 !important;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  span:nth-child(1) {
+  color: $color-3mode;
+  font-size: $font-size-primary + 0.5;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  span:nth-child(2) {
+  color: red;
+  font-size: $font-size-primary + 1;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  span:nth-child(4) {
+  color: #00b853;
+  background-color: #b8eed0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: $font-size-primary + 0.2;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+#product-info div.container div.row div.row div.col-xl-6.col-12 .add-to-cart {
+  margin: 2rem 0;
+  display: inline-block;
+  align-items: center;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  .add-to-cart
+  span:nth-child(1) {
+  background-color: rgb(221, 221, 221);
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  .add-to-cart
+  span:nth-child(3) {
+  background-color: rgb(221, 221, 221);
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  .add-to-cart
+  span:nth-child(2) {
+  color: black !important;
+  margin: 0 0.5rem;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  .add-to-cart
+  span:nth-child(1)
+  i {
+  margin-left: 0 !important;
+  padding-top: 10px;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  .add-to-cart
+  span:nth-child(3)
+  i {
+  margin-left: 0 !important;
+  padding-top: 10px;
+}
+
+#product-info div.container div.row div.row div.col-xl-6.col-12 .add-to-cart a {
+  cursor: pointer;
+  padding: 10px;
+  background-color: $color-primary;
+  color: white;
+  border-radius: 30px;
+  margin-left: 1rem;
+}
+
+#product-info div.container div.row div.row div.col-xl-6.col-12 .pro-info p {
+  margin: 10px 0 0 0;
+}
+
+#product-info div.container div.row div.row div.col-xl-6.col-12 a {
+  cursor: pointer;
+}
+
+#product-info div.container div.row div.row div.col-xl-6.col-12 .pro-info {
+  border-bottom: 1px solid $color-border;
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+#product-info div.container div.row div.row div.col-xl-6.col-12 .pro-info p i {
+  margin: 0 1rem 0 0;
+  color: #00b853;
+}
+
+#product-info div.container div.row div.row div.col-xl-6.col-12 .social-media {
+  margin: 2rem 0;
+}
+
+#product-info
+  div.container
+  div.row
+  div.row
+  div.col-xl-6.col-12
+  .social-media
+  i {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+#product-info div.container div.row div.row div.col-xl-6.col-12 {
+  margin-top: 2rem;
+}
+
+#product-info .covid19-info span {
+  color: #be143c !important;
+  font-size: 1rem !important;
+  text-align: center !important;
+  background-color: #fad2db;
+  border-radius: 5px;
+  padding: 5px;
+  display: grid;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+}
+
+#product-info .brand-offers {
+  background-color: #f7f8fd;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+#product-info .brand-offers p i {
+  margin-right: 1rem;
+}
+
+//tab menu
+#tab-menus {
+  background-color: #f7f8fd;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+#tab-menus .container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+#tab-menus .tab-menu .header {
+  display: flex;
+  background-color: $color-1mode;
+  height: auto;
+  font-size: 20px;
+  border-left: 1px solid $color-border;
+  border-right: 1px solid $color-border;
+  border-top: 1px solid $color-border;
+  transition: all 0.3s;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 0.5rem 0;
+}
+
+#tab-menus .tab-menu .header div {
+  color: $color-3mode;
+  padding-left: 15px;
+  cursor: pointer;
+  padding-right: 9px;
+  width: auto;
+  text-align: center;
+  font-weight: 500;
+}
+
+#tab-menus .tab-menu .content {
+  border: 1px solid $color-border;
+  padding: 30px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#tab-menus .active {
+  color: $color-2mode !important;
+}
+
+#tab-menus .content .add-info {
+  display: flex;
+}
+#tab-menus .content .add-info .brands {
+  width: 50%;
+  border: 1px solid $color-border;
+  align-items: center;
+  display: flex;
+}
+#tab-menus .content .add-info .brands p {
+  margin: 1rem 0.5rem;
+}
+
+#tab-menus div.add-review div.header-review h5 {
+  padding: 1rem 0;
+  border-bottom: 1px solid $color-border;
+}
+#tab-menus div.add-review div.starred-text p:nth-child(1) {
+  padding-top: 1rem;
+}
+#tab-menus div.add-review form input {
+  margin: 0.5rem 0;
+  display: block;
+  background-color: #f3f4f7;
+  border: 0;
+  width: 100%;
+}
+
+#tab-menus div.add-review form input:nth-child(7) {
+  display: inline !important;
+  width: auto !important;
+}
+#tab-menus div.add-review form input:nth-child(9) {
+  width: 10rem !important;
+  height: 3rem;
+  background-color: #233a95;
+  color: white;
+  border-radius: 5px;
+}
+#tab-menus div.add-review form label {
+  font-size: $font-size-primary;
+}
+#tab-menus div.add-review form textarea {
+  margin: 1em 0;
+  background-color: #f3f4f7;
+  border: 0;
+  width: 100%;
+}
+#tab-menus .header div {
+  font-size: $font-size-primary + 0.3;
+}
+
+#product-filters {
+  background-color: #f7f8fd;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+#product-filters .container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}

@@ -1,0 +1,102 @@
+#img-about div.image-fronter {
+  position: relative;
+}
+
+#img-about div.image-fronter div.content-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: cover;
+  background-color: Black;
+  z-index: 2;
+}
+
+#img-about div.image-fronter div.content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+  opacity: 0.5;
+}
+
+#img-about div.image-fronter div.container {
+  padding-top: 16.25rem;
+  padding-bottom: 16.25rem;
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+}
+
+#img-about div.image-fronter div.container div.context-text h1 {
+  font-size: 3.75rem;
+  font-weight: 600;
+}
+
+#img-about div.image-fronter div.container div.context-text h4 {
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#ceo-info p {
+  margin: 3rem 0;
+  hyphens: manual;
+}
+
+#ceo-info div.container div.about-middle div.bottom-text {
+  padding-left: 5rem;
+}
+
+#ceo-info div.container div.about-bottom div.bottom-top {
+  position: relative;
+}
+
+#ceo-info div.container div.about-bottom div.bottom-top div.left-column img {
+  height: 100%;
+  width: 100%;
+}
+
+#ceo-info div.container div.about-bottom div.bottom-top div.right-column {
+  display: grid;
+  align-content: center;
+  align-items: center;
+}
+
+#ceo-info div.container div.about-bottom div.bottom-top div.right-column h5 {
+  margin-bottom: 2rem;
+}
+
+#ceo-info div.container div.about-bottom div.bottom-bottom {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: -10rem;
+}
+
+#ceo-info div.container div.about-bottom .box-content {
+  align-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 0px 0px 0px 100px;
+  padding: 60px 15px 60px 100px;
+
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  #ceo-info .bottom-text {
+    padding-left: 0 !important;
+  }
+
+  #ceo-info div.container div.about-bottom div.bottom-bottom {
+    margin: 0 !important;
+  }
+
+  #ceo-info div.container div.about-bottom div.bottom-bottom .box-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
